@@ -55,7 +55,7 @@ if (isset($_POST['submit'] ) )
 				else 
 				{
 				// hashing the password
-				$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+				$hashedPwd = md5($pwd);
 				// Insert the user into the database
 				$sql = "INSERT INTO users (user_id, user_first, user_last, user_email, user_uid, user_pwd) 
 				VALUES ('','$first', '$last', '$email','$uid', '$hashedPwd')";
