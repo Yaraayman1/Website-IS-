@@ -6,4 +6,5 @@ $dbPassword = "";
 $dbName = "websitedb";
 
 $conn = mysqli_connect($dbServername, $dbUsername,  $dbPassword, $dbName);
+?>
 
