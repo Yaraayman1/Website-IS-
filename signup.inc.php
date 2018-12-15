@@ -11,6 +11,7 @@ if (isset($_POST['submit'] ) )
 	$email = mysqli_real_escape_string($conn, $_POST['email']); 
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']); 
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']); 
+	$role = mysqli_real_escape_string($conn, $_POST['role']);
 
 	
 	// Error handlers
@@ -24,7 +25,7 @@ if (isset($_POST['submit'] ) )
 	else 
 	{
 		// check if input characters are valid 
-		if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)) 
+		if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last || !preg_match("Teacher"|| "teacher"|| "Student" || "student" || "Lecturer" || "lecturer" ), $role)) 
 		{
 		//header( "Location: ../signup.php?signup=invalid");
 		echo'system fail';

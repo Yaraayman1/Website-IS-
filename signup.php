@@ -10,6 +10,7 @@
 			<input type ="text" name= "email" placeholder = "E-mail"> 
 			<input type ="text" name= "uid" placeholder = "Username"> 
 			<input type ="text" name= "pwd" placeholder = "Password"> 
+			<input type ="text" name= "role" placeholder = "Role">
 			<button type = "submit" name = "submit">Signup</button>
 		</form>
 	</div>

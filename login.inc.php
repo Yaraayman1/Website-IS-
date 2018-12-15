@@ -33,14 +33,16 @@ if (isset($_POST['submitL'] ) )
             $_SESSION['frst'] =  $a['user_first'];
             $_SESSION['last'] =  $a['user_last'];
             $_SESSION['email'] =  $a['user_email'];
-            $_SESSION['uid'] =  $a['user_uid'];
+			$_SESSION['uid'] =  $a['user_uid'];
+			$_SESSION['role']= $a['user_role'];
             
             echo'login succ <br>';
             echo 'id: '.$_SESSION['id'] . ' <br>';
             echo 'first name: '.$_SESSION['frst'] . ' <br>';
             echo 'last name: '.$_SESSION['last']. ' <br>';
             echo 'email: '.$_SESSION['email'].' <br>';
-            echo 'username: '.$_SESSION['uid'] . ' <br>';
+			echo 'username: '.$_SESSION['uid'] . ' <br>';
+			echo 'role': $_SESSION ['role'].' <br>';
             
 
             exit ( );
