@@ -35,15 +35,16 @@ if (isset($_POST['submitL'] ) )
             $_SESSION['email'] =  $a['user_email'];
 			$_SESSION['uid'] =  $a['user_uid'];
 			$_SESSION['role']= $a['user_role'];
-            
-            echo'login succ <br>';
-            echo 'id: '.$_SESSION['id'] . ' <br>';
-            echo 'first name: '.$_SESSION['frst'] . ' <br>';
-            echo 'last name: '.$_SESSION['last']. ' <br>';
-            echo 'email: '.$_SESSION['email'].' <br>';
-			echo 'username: '.$_SESSION['uid'] . ' <br>';
-			echo 'role': $_SESSION ['role'].' <br>';
-            
+			
+			if($_SESSION['role'] == 'student'){
+				header('location: st.php');
+			}
+            elseif($_SESSION['role'] == 'ta'){
+				header('location: ta.php');
+			}
+			elseif($_SESSION['role'] == 'lecturer'){
+				
+			}
 
             exit ( );
             
